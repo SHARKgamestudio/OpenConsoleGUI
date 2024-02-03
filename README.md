@@ -7,6 +7,7 @@
 Open Console GUI is a simple library that allows you to create interactive GUI elements in your terminal, within just a few lines.
 ## Installation :
 ```python
+  python -m pip install OpenConsoleGUILib
   python -m pip install --upgrade pip
   python -m pip install keyboard
 ```
