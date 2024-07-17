@@ -34,8 +34,8 @@ items = [
     MenuItem("Item2", event2)
 ]
 
-# Creates a menu with a name and a list of items. You can change the default selected item and apply styles.
-menu = Menu("Sample Menu", items)
+# Creates a menu with a name and a list of items.
+menu = Menu("Sample Menu", items) # You can change the default selected item and apply styles.
 
 # Declare a main loop for running the menu.
 while True:
