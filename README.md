@@ -1,24 +1,44 @@
 
-![Logo](https://zupimages.net/up/23/02/npog.png)
+## Usage/Examples
 
+#### Create Menus
+Interactive Menus are composed of:
+- A title
+- A list of items that the user can navigate
+- A style that can be applied to change the appearance
 
-# OpenConsoleGUILib
+Each item contains:
+- A text to display
+- A function that triggers when the user selects the item and presses the 'enter' key
 
-Open Console GUI is a simple library that allows you to create interactive GUI elements in your terminal, within just a few lines.
-## Installation :
+Here is an example of usage:
 ```python
-  python -m pip install OpenConsoleGUILib
-  python -m pip install --upgrade pip
-  python -m pip install keyboard
+# It is recommended to import all classes from the library.
+from cgui import *
+
+# Declare functions triggered by items.
+def event0():
+    # do something
+    pass
+def event1():
+    # do something
+    pass
+def event2():
+    # do something
+    pass
+
+# Declare items with names and associated trigger functions executed upon confirmation events.
+items = [
+    MenuItem("Item0", event0),
+    MenuItem("Item1", event1),
+    MenuItem("Item2", event2)
+]
+
+# Creates a menu with a name and a list of items. You can change the default selected item and apply styles.
+menu = Menu("Sample Menu", items)
+
+# Declare a main loop for running the menu.
+while True:
+    menu.update()
 ```
-## Features
 
-#### Menus :
-
-Create a fully functional console menu in which you can navigate with any keys on your keyboards, it work with an item system that can return 'id' after a selection event.
-(see more on the documentation or with the example-script)
-
-#### Progress bars
-
-Display a progress-bar in the console with the given value in '%' other parameters such as 'filename' can also be shown. (The look of the bars depends on your system).         
-(See more on the documentation or with the example-script)
