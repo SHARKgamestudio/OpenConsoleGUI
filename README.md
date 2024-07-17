@@ -1,4 +1,29 @@
+![Logo](https://zupimages.net/up/23/02/npog.png)
 
+
+# OpenConsoleGUI
+
+✧ Interactive Console Menus & Loading Bars ✧
+
+❱ Open Console GUI is a library for easily creating interactive terminal GUIs with minimal code.
+## Installation
+
+OpenConsoleGUI can be installed from pypi using pip:
+```bash
+pip install open-console-gui
+```
+
+Or it can be cloned from GitHub if you want, for example to edit the package:
+```bash
+git clone https://github.com/SHARKgamestudio/OpenConsoleGUI.git
+```
+## Features
+
+- Interactive menus with keyboard navigation
+- Predefined / custom styles for menus
+- Interactive progress-bars with a ton of options
+- Predefined / custom styles for progress-bars
+↻ More Features are planned for future updates.
 ## Usage/Examples
 
 #### Create Menus
