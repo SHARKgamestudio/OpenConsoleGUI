@@ -78,8 +78,8 @@ Here is an example of usage:
 # It is recommended to import all classes from the library.
 from cgui import *
 
-# Creates a progress-bar with a prefix and a specified length (e.g., 25 characters). You can display the % and apply styles.
-bar = ProgressBar(prefix="myBar", length=25)
+# Creates a progress-bar with a prefix and a specified length (e.g., 25 characters).
+bar = ProgressBar(prefix="myBar", length=25) # You can display the % and apply styles.
 
 # Create a loop for updating the value (must be given in %).
 for progress in range(100):
