@@ -1,6 +1,5 @@
 ![Logo](https://zupimages.net/up/23/02/npog.png)
 
-
 # OpenConsoleGUI
 
 ✧ Interactive Console Menus & Loading Bars ✧
@@ -67,3 +66,112 @@ while True:
     menu.update()
 ```
 
+#### Create Progress-Bars
+Progress-Bars are composed of:
+- A prefix
+- A length (in char)
+- A style that can be applied to change the appearance
+
+Here is an example of usage:
+```python
+# It is recommended to import all classes from the library.
+from cgui import *
+
+# Creates a progress-bar with a prefix and a specified length (e.g., 25 characters). You can display the % and apply styles.
+bar = ProgressBar(prefix="myBar", length=25)
+
+# Create a loop for updating the value (must be given in %).
+for progress in range(100):
+    bar.update(progress + 1)
+```
+## Using Styles
+❱ Styles let you customize the appearance of console GUI elements.
+
+❱ There are two ways to stylize your elements:
+
+- Predefined Styles
+- Custom Styles
+
+#### Predefined Styles
+OpenConsoleGUI comes with pre-packaged styles for both menus and progress-bars.
+
+Use them by referencing their variable names in the constructor of your GUI element:
+```python
+menu = Menu("Sample Menu", items, style=im_style0)
+```
+-- --
+➮ Here are all the pre-packaged styles available:
+
+im_style_0 :
+```
+ |[Sample Menu]|
+>  0.Item0
+   1.Item1
+   2.Item2
+```
+
+im_style_1 :
+```
+ 【Sample Menu】
+▶  0.Item0
+   1.Item1
+   2.Item2
+```
+
+im_style_2 :
+```
+ ☾Sample Menu☽
+➤ 0.Item0
+   1.Item1
+   2.Item2
+```
+
+im_style_3 :
+```
+ 𓇼Sample Menu𓇼
+✦  0.Item0
+   1.Item1
+   2.Item2
+```
+
+pb_style_0 :
+```
+████████████············ 50%
+```
+
+pb_style_1 :
+```
+|████████████             | 50%
+```
+
+pb_style_2 :
+```
+■■■■■■■■■■■■□□□□□□□□□□□□□ 50%
+```
+
+pb_style_3 :
+```
+▰▰▰▰▰▰▰▱▱▱▱▱▱ 50%
+```
+
+#### Custom Styles
+❱ You can create custom styles by using the appropriate class for your GUI element.
+
+❱ You can apply them the same way as the predefined ones.
+
+➮ Here is an example with MenuStyle:
+```python
+myStyle = MenuStyle('☾', '☽', '➤')
+menu = Menu("Sample Menu", items, style=myStyle)
+```
+
+➮ Here is an example with ProgressBarStyle:
+```python
+myStyle = ProgressBarStyle('□', '■', '')
+menu = ProgressBar(length=25, style=myStyle)
+```
+## Credits
+
+This library uses the modules 'os', 'time', and 'keyboard'.
+
+['keyboard' by BoppreH](https://pypi.org/project/keyboard/)
