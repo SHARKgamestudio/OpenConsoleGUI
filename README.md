@@ -22,6 +22,7 @@ git clone https://github.com/SHARKgamestudio/OpenConsoleGUI.git
 - Predefined / custom styles for menus
 - Interactive progress-bars with a ton of options
 - Predefined / custom styles for progress-bars
+
 ↻ More Features are planned for future updates.
 ## Usage/Examples
 
